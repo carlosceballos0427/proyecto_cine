@@ -29,17 +29,18 @@ class Funcion(models.Model):
 
 
 class Cliente(models.Model):
-    nombre = models.CharField(max_length=20)
+    nombre_apellidos = models.CharField(max_length=20)
     telefono = models.CharField(max_length=10)
     correo = models.CharField(max_length=100)
+    edad = models.CharField(max_length=3)
 
 
 class Boleta(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.PROTECT)
-    fecha = models.DateTimeField(auto_now_add=False)
+    fecha = models.DateTimeField(auto_now_add=True)
     funcion = models.ForeignKey(Funcion, on_delete=models.PROTECT)
     asientos = models.IntegerField()
-    valor_boleta = models.FloatField()
+    valor_boleta = models.IntegerField()
 
 
     
