@@ -53,5 +53,3 @@ class Boleta_serializer(serializers.ModelSerializer):
 
 
 
-
-

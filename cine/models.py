@@ -3,7 +3,7 @@ from django.db import models
 
 class Cine(models.Model):
     nombre = models.CharField(max_length=20)
-    dreccion = models.CharField(max_length=100)
+    direccion = models.CharField(max_length=100)
 
 
 class Sala(models.Model):
